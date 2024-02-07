@@ -1,0 +1,24 @@
+package u1.pkg05.loopdowhileconcatenar;
+
+import java.util.Scanner;
+
+public class LoopDoWhileConcatenar {
+    public static void main(String[] args) {
+        Scanner reader = new Scanner(System.in);
+        String input;
+        String all = "";
+        int i = 5;
+        
+        do{
+            input =reader.nextLine();
+            all += input;
+            i--;
+        }
+
+        while (!input.equals("STOP"));
+        System.out.println(all);
+
+        // Make sure to close the scanner to avoid resource leaks
+        reader.close();
+    }
+}
